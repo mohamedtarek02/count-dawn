@@ -1,0 +1,209 @@
+/*start of general styles */
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    counter-reset: my-count 3;
+} 
+
+/* remove arrows from input that has type (number) */ 
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+}
+
+span {
+    font-weight: bold;
+}
+
+/* strat of timer */
+.container {
+    margin: 30px auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -110px;
+    width: 300px;
+}
+.timer {
+    margin: 20px 0 7px;
+    text-align: center;
+    display: inline-block;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 3px;
+    width: 220px;
+}
+
+.timer h2 {
+    margin: -3px;
+    color: #002e47;
+    letter-spacing: 2px;
+    background-color: #c5cfd9;
+    padding: 11px;
+    margin-bottom: 10px;
+}
+.m {
+    margin: 0 30px !important;
+}
+.txt {
+    color: white;
+    margin: 0 22px;
+    margin-bottom: 3px;
+    display:inline-block;
+    font-size: 24px;
+}
+.timer .dots{
+    font-family: 30px !important;
+}
+.timer input {
+    width: 39px;
+    height: 39px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    color: #0d3d58;
+    margin:  3px 9px;
+    margin-bottom: 10px;
+}
+input:focus::placeholder {
+    opacity: 0.1;
+  }
+input:focus{ 
+    outline-color: #808080;
+}
+.minutes, .seconds, .hours {
+    display:inline-block;
+    background-color: #c5cfd9;
+    padding: 5px;
+    margin-bottom: 11px;
+    border-radius: 5px;
+    user-select: none;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+/* start of buttons  */
+.buttons-con {
+    margin-top: 3px;
+}
+.buttons-con button {
+    padding: 8px 10px ;
+    border: none;
+    border-radius: 5px;
+    width: 104px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.buttons-con .resume {
+    background-color: #36893a;
+    margin-right: 11px;
+    
+}
+.buttons-con .stop {
+    background-color: #E91E63;
+}
+.buttons-con .reset {
+    background-color: #5800cc;
+    margin-top: 7px;
+    width: 223px;
+}
+.buttons-con .resume:hover {
+    background-color: #256a28;
+}
+.buttons-con .stop:hover {
+    background-color: #ba003f;
+}
+
+.buttons-con .reset:hover  {
+    background-color: #410195 ;
+}
+
+.buttons-con  .resume.disabled,
+.buttons-con  .stop.disabled{
+    
+    cursor: no-drop; 
+}
+.buttons-con  .resume.disabled {
+    background: #122d13;
+}
+.buttons-con  .stop.disabled {
+    background: #350314
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+    .timer {
+        width: 700px;
+        margin: 10px 0;
+    }
+    h2 {
+        letter-spacing: 5px !important;
+        padding: 20px !important;
+        font-size: 92px;
+    }
+    .container {
+    margin: 30px;
+    margin-left: 30px;
+    position: static;
+    left: 0%;
+    }
+    input {
+        margin-bottom: 50px !important;
+    }
+    .text-con {
+        padding: 40px 20px 0px ;
+        text-align: left;
+    }
+    .timer input {
+        width: 130px;
+        height: 130px;
+        margin: 0px 30px;
+        font-size: 80px;
+    }
+    .h, .m, .s {
+        font-size: 50px;
+        margin: 10px 81px !important;
+    }
+    .buttons-con {
+        width: 700px;
+    }
+    .buttons-con .resume {
+        width: 45%;
+        margin-right: 5%;
+        height: 100px;
+        margin-bottom: 20px ;
+        margin-top: 20px ;
+
+    }
+    .buttons-con .stop {
+        width: 49%;
+        height: 100px;
+    }
+    .buttons-con .reset {
+        width: 700px;
+        height: 100px;
+    }
+}

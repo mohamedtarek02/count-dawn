@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <title>Countdown</title>
+  </head>
+  <body>
+    <!-- start of timer  -->
+    <div class="container">
+      <div class="timer">
+        <h2>Countdown</h2>
+        <div class="text-con">
+          <span class="h txt">H</span>
+          <span class="m txt">M</span>
+          <span class="s txt">S</span>
+          <br />
+          <input
+            type="number"
+            id="1"
+            maxlength="2"
+            oninput="limit(this)"
+            placeholder="00"
+            class="hours startCount"
+          />
+          <span class="dots">:</span>
+          <input
+            type="number"
+            id="2"
+            maxlength="2"
+            oninput="limit(this)"
+            placeholder="00"
+            class="minutes startCount"
+          />
+          <span class="dots">:</span>
+          <input
+            type="number"
+            id="3"
+            maxlength="2"
+            oninput="limit(this)"
+            placeholder="00"
+            class="seconds startCount"
+          />
+        </div>
+      </div>
+
+      <div class="buttons-con">
+        <button class="resume">Start</button>
+        <button class="stop disabled">Pause</button>
+        <br />
+        <button class="reset">Reset</button>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
